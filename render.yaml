@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: zombie-sky
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: EULER_API_KEY
+        sync: false
